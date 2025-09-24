@@ -1,0 +1,130 @@
+/* Basic reset and body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50; /* A fresh green for the heading */
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#taskInput:focus {
+    border-color: #4CAF50;
+}
+
+#addTaskBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#addTaskBtn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #e0e0e0; /* Subtle accent */
+}
+
+#taskList li:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#taskList li.completed {
+    background-color: #e6ffe6; /* Lighter green for completed tasks */
+    text-decoration: line-through;
+    color: #888;
+    border-left-color: #4CAF50;
+}
+
+#taskList li span {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+#taskList li .task-actions {
+    display: flex;
+    align-items: center;
+}
+
+.complete-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.complete-btn {
+    color: #2196F3; /* Blue for complete */
+}
+
+.complete-btn:hover {
+    background-color: rgba(33, 150, 243, 0.1);
+}
+
+.delete-btn {
+    color: #f44336; /* Red for delete */
+}
+
+.delete-btn:hover {
+    background-color: rgba(244, 67, 54, 0.1);
+}
